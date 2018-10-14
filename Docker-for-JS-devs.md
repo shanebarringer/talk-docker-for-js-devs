@@ -56,7 +56,7 @@ So it seems like containers are all the rage these days. I mean, it makes sense,
 
 
 
-![works-on-my-machine](/Users/mxb5594/orange-method/talk-docker-for-js-devs/images/works-on-my-machine.jpeg)
+![works-on-my-machine](./images/works-on-my-machine.jpeg)
 
 
 
@@ -66,11 +66,9 @@ Of course, there are many other benefits, such as load-balancing, resiliency, et
 
 ### My experience
 
-
-
 I had a moment of enligtenment when I saw an image of shipping containers as analogy for Docker.
 
-![expectation](/Users/mxb5594/orange-method/talk-docker-for-js-devs/images/expectation.jpg)
+![expectation](./images/expectation.jpg)
 
 
 
@@ -78,7 +76,7 @@ Unfortunately, my experience working on teams using Docker was much more like th
 
 
 
-![experience](/Users/mxb5594/orange-method/talk-docker-for-js-devs/images/disaster.jpg)
+![experience](./images/disaster.jpg)
 
 As a consultant (prior to The Home Depot), I would find myself on a new project every few months. I had several **painful** experiences using Docker for development purposes. 
 
@@ -92,7 +90,7 @@ It seemed to be that daily I would run into problems with things like:
 
 Sure, I didn't have to spend an entire day setting up my environment, and yes down the road it *should* make our lives easier. For me however, those weren't big enough selling points. 
 
-![throw-computer](/Users/mxb5594/orange-method/talk-docker-for-js-devs/images/throw-computer.gif)
+![throw-computer](./images/throw-computer.gif)
 
 
 
@@ -110,7 +108,7 @@ Yes, it took me a while, but it wasn't until I gave Docker an open-minded chance
 
 
 
-![enlightenment](/Users/mxb5594/orange-method/talk-docker-for-js-devs/images/enlightenment.gif)
+![enlightenment](./images/enlightenment.gif)
 
 
 
@@ -390,7 +388,7 @@ The first build will take slightly longer as it needs to pull in the appropriate
 
 
 
-![celebrate](/Users/mxb5594/orange-method/talk-docker-for-js-devs/images/celebrate.gif)
+![celebrate](./images/celebrate.gif)
 
 
 

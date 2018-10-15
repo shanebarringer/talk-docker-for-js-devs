@@ -22,7 +22,7 @@ If you're here, my best guess is that you fall into one of the following categor
 
 
 
-The goal for this talk to really dig into the development side of Docker and showcase some of the benefits. 
+The goal for this talk is to really dig into the development side of Docker and showcase some of the benefits. 
 
 
 
@@ -100,7 +100,7 @@ I ended up spending a stretch of time absolutely hating Docker. Mainly because I
 
 #### What Changed?
 
-So, I'm sure you're asking  yourself something like: "okay, Shane, what changed your mind?"
+So, I'm sure you're asking yourself something like: "okay, Shane, what changed your mind?"
 
 And while the answer is actually pretty simple, It is not the one I want to give. What changed my mind was going to the docs and learning about Docker from the ground up (along with the help from a couple of excellent tutorials). 
 
@@ -116,7 +116,7 @@ Yes, it took me a while, but it wasn't until I gave Docker an open-minded chance
 
 As stated in the intro, we are going to use a small API built with Node.js & Express, that interacts with a Postgres Database. 
 
-The repo can be found [here](https://github.com/shanebarringer/docker-music). We'll start with a fairly standard setup, which can be found on master
+The repo can be found [here](https://github.com/shanebarringer/docker-music). We'll start with a fairly standard setup, which can be found on master:
 
 
 
@@ -133,7 +133,7 @@ Looking at the `package.json` file, you'll see that we have a couple of addition
 },
 ```
 
-I'm of the opinion that npm scripts are a great way to automate repetitive tasks for your project. Here, you will see two scripts related to database setup, `db:migrate` and `db:seed`. Both of these scripts make use of the [knex.js](https://knexjs.org/) library. Knex is a SQL query builder for Node.js. _note: it is note a full-featured ORM_. 
+I'm of the opinion that npm scripts are a great way to automate repetitive tasks for your project. Here, you will see two scripts related to database setup, `db:migrate` and `db:seed`. Both of these scripts make use of the [knex.js](https://knexjs.org/) library. Knex is a SQL query builder for Node.js. _note: it is not a full-featured ORM_. 
 
 
 
@@ -334,13 +334,13 @@ Great! So, it looks like our application is working. Now, let's take a look at h
 
 ## Docker Setup
 
-Next, we're going to checkout the `docker-setup` branch. This branch has the entire configuration in place. We are first going to run the app, to ensure eerything works as expected. Then we'll step through the additional files and break them down line-by-line.
+Next, we're going to checkout the `docker-setup` branch. This branch has the entire configuration in place. We are first going to run the app, to ensure everything works as expected. Then we'll step through the additional files and break them down line-by-line.
 
 
 
 ### Startup
 
-First, we'll do perform some cleanup, from our previous example. 
+First, we'll perform some cleanup, from our previous example. 
 
 ```shell
 $ dropdb docker-music_dev
@@ -733,7 +733,7 @@ Here, we can perform all the standard CRUD actions, add new tables, and more.
 
 We have moved out of `service` object at this point, and have a top-level `volume` object. This is due to the fact that we want to share our `postgres-data` volume across multiple services. 
 
-The syntax may look a slightly strange. This is due to the fact that our volume is already established. An alternative syntax is: 
+The syntax may look slightly strange. This is due to the fact that our volume is already established. An alternative syntax is: 
 
 ```yaml
 volumes:
@@ -869,7 +869,7 @@ Running a few calls on our endpoints, will reveal the expected behavior.
 
 
 
-Until now, we have started up our containers and let it kind-of over-take the terminal. Obviously, we can open a second terminal window to perform various tasks. However, Docker does offer us the `-d` flag which means to run our containers in `detached` mode. 
+Until now, we have started up our containers and let it kind-of over-take the terminal. Obviously, we can open a second terminal window to perform various tasks. However, Docker does offer us the `-d` flag which means we can run our containers in `detached` mode. 
 
 
 
@@ -891,7 +891,7 @@ Now, we can execute commands against our containers. Let's try resetting the dat
 $ docker-compose exec api npm run db:reset
 ```
 
-You'll see output indicating that the command was successful. What happening here, is that we are telling docker-compose to **execute** a command. This command can be broken down into 3 separate parts
+You'll see output indicating that the command was successful. What is happening here, is that we are telling docker-compose to **execute** a command. This command can be broken down into 3 separate parts
 
 - `exec` - execute a command
 - `api` - the container to operate on
@@ -927,7 +927,7 @@ Here, we are passing an additional flag of `-it` to `exec`. This flag ensures th
 
 
 
-There are many additional commands that can be executed against your containers, definitely take some time to explore them. 
+There are many additional commands that can be executed against your containers, it will definitely take some time to explore them. 
 
 
 

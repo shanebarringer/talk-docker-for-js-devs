@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://localhost:8081/published/slides/.git.md?preview#/5 -->
+<html lang="en" class=" js no-mobile desktop no-ie chrome chrome69 published-section slides-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch retina fontface domloaded w-691 gt-240 gt-320 gt-480 gt-640 lt-768 lt-800 lt-1024 lt-1280 lt-1440 lt-1680 lt-1920 no-portrait landscape" id=".git.md-page" data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+
+        <title>reveal.js - The HTML Presentation Framework</title>
+
+        <meta name="description" content="An awesome presentation">
+        <meta name="author" content="">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="./reveal.css">
+        <link rel="stylesheet" href="./night.css" id="theme">
+
+        
+        <link rel="stylesheet" href="./zenburn.css">
+
+        
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '/static/reveal.js/css/print/pdf.css' : '/static/reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script><style type="text/css">
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle
+{ display: none !important; }</style><link rel="stylesheet" type="text/css" href="./paper.css"><script type="text/javascript" src="./marked.js"></script><script type="text/javascript" src="./markdown.js"></script><script type="text/javascript" src="./highlight.js"></script><script type="text/javascript" src="./zoom.js"></script><script type="text/javascript" src="./notes.js"></script><script type="text/javascript" src="./math.js"></script>
+
+        
+    <script type="text/javascript" src="./MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><link href="chrome-extension://nffaoalbilbmmfgbnbgppjihopabppdk/inject.css" type="text/css" rel="stylesheet"><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.0') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.0') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.0') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.0') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.0') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.0') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.0') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.0') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.0') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+    <body style="transition: -webkit-transform 0.8s ease 0s;" class="vsc-initialized"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+        <select id="themes" style="float:right;">
+        <option value="black.css">black.css</option><option value="beige.css">beige.css</option><option value="blood.css">blood.css</option><option value="league.css">league.css</option><option value="moon.css">moon.css</option><option value="night.css">night.css</option><option value="serif.css">serif.css</option><option value="simple.css">simple.css</option><option value="sky.css">sky.css</option><option value="solarized.css">solarized.css</option><option value="white.css">white.css</option></select>
+        <div class="reveal slide center ready has-horizontal-slides" role="application" data-transition-speed="fast" data-background-transition="fade">
+            <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.691);"><section data-charset="utf-8" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="past" style="display: none;"><h1 id="docker-for-javascript-developers">Docker for JavaScript Developers</h1>
+</section><section data-charset="utf-8" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="past" style="display: none;"><h3 id="about-shane">About Shane</h3>
+<p>👋 Hi! I'm Shane. I'm a Senior Software Engineer &amp; Instructor at The Home Depot. As a part of the OrangeMethod team, I build applications and supporting curriculum on a wide range of topics. Currently, I am helping run our 15 week fullstack bootcamp, and preparing a series of workshops on React, Go, and Node. </p>
+</section><section data-charset="utf-8" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="past" style="display: none;"><h3 id="purpose">Purpose</h3>
+<p>The subject of this talk is Docker for JavaScript developers. </p>
+<p>If you're here, my best guess is that you fall into one of the following categories. </p>
+<ul>
+<li>You think Docker is neat, and want to start working with it</li>
+<li>You know you need to learn more about Docker, and find it tough to get started</li>
+<li>You know you <em>should</em> care, but don't, and have nothing better to do</li>
+</ul>
+</section><section data-charset="utf-8" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="past" style="display: block; top: 232px;"><p>The goal for this talk is to really dig into the development side of Docker and showcase some of the benefits. </p>
+</section><section data-charset="utf-8" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="past" style="display: block; top: 74px;"><h4 id="what-this-talk-_is-not_-about">What this talk <em>is not</em> about</h4>
+<p>Before moving into the good stuff, I first want to discuss what this talk is <em>not</em> about. </p>
+<p>We will not be discussing: </p>
+<ul>
+<li>Using Docker for Deployment/Production</li>
+<li>Kubernetes, Swarm</li>
+</ul>
+<p>In addition, this will not be another tutorial using Redis. (Redis is great btw!)</p>
+</section><section data-charset="utf-8" data-markdown="" data-markdown-parsed="true" class="present" style="display: block; top: 120px;"><h4 id="what-this-talk-_is_-about">What this talk <em>is</em> about</h4>
+<p>We are going to look at a real world example of a Node.js API with a Postgres database. </p>
+<p>The goal is to demonstrate</p>
+<ul>
+<li>Why you should consider using Docker for development</li>
+<li>How to use Docker effectively in Development</li>
+</ul>
+</section><section data-charset="utf-8" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" style="display: block; top: 0px;"><h2 id="containers-">Containers?</h2>
+<p>So it seems like containers are all the rage these days. I mean, it makes sense, store your application and dependencies in a container and ship it :shipit: anywhere you want. One of the key benefits, is that your application will run without the classic fear of your application performing differently in another environment. </p>
+<p><img src="./works-on-my-machine.jpeg" alt="works-on-my-machine"></p>
+<p>Of course, there are many other benefits, such as load-balancing, resiliency, etc. However, that typically doesn't come into play when you're involved in day-to-day coding. </p>
+<h3 id="my-experience">My experience</h3>
+<p>I had a moment of enligtenment when I saw an image of shipping containers as analogy for Docker.</p>
+<p><img src="./expectation.jpg" alt="expectation"></p>
+<p>Unfortunately, my experience working on teams using Docker was much more like this:</p>
+<p><img src="./disaster.jpg" alt="experience"></p>
+<p>As a consultant (prior to The Home Depot), I would find myself on a new project every few months. I had several <strong>painful</strong> experiences using Docker for development purposes. </p>
+<p>It seemed to be that daily I would run into problems with things like:</p>
+<ul>
+<li>Error messages on startup, and no explanation of how critical they might be</li>
+<li>Inability to run a debugger, or even get a simple <code>console.log</code> to work</li>
+<li>Data vanishing without a trace</li>
+</ul>
+<p>Sure, I didn't have to spend an entire day setting up my environment, and yes down the road it <em>should</em> make our lives easier. For me however, those weren't big enough selling points. </p>
+<p><img src="./throw-computer.gif" alt="throw-computer"></p>
+<p>I ended up spending a stretch of time absolutely hating Docker. Mainly because I never took the time to understand the benefits in development. It always seemed to make my daily work miserable, only to solve some future problem that could be solved in other ways. </p>
+<h4 id="what-changed-">What Changed?</h4>
+<p>So, I'm sure you're asking yourself something like: "okay, Shane, what changed your mind?"</p>
+<p>And while the answer is actually pretty simple, It is not the one I want to give. What changed my mind was going to the docs and learning about Docker from the ground up (along with the help from a couple of excellent tutorials). </p>
+<p>Yes, it took me a while, but it wasn't until I gave Docker an open-minded chance, that I started to see the benefits. </p>
+<p><img src="./enlightenment.gif" alt="enlightenment"></p>
+<h2 id="getting-into-the-code">Getting into the Code</h2>
+<p>As stated in the intro, we are going to use a small API built with Node.js &amp; Express, that interacts with a Postgres Database. </p>
+<p>The repo can be found <a href="https://github.com/shanebarringer/docker-music">here</a>. We'll start with a fairly standard setup, which can be found on master:</p>
+<h3 id="scripts-and-databases">Scripts and Databases</h3>
+<p>Looking at the <code>package.json</code> file, you'll see that we have a couple of additional scripts for database setup. </p>
+<pre><code class="lang-json hljs"><span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-attr">"start"</span>: <span class="hljs-string">"NODE_ENV=production node app.js"</span>,
+    <span class="hljs-attr">"dev"</span>: <span class="hljs-string">"NODE_ENV=development nodemon app.js"</span>,
+    <span class="hljs-attr">"db:migrate"</span>: <span class="hljs-string">"./node_modules/knex/bin/cli.js migrate:latest --env development"</span>,
+    <span class="hljs-attr">"db:seed"</span>: <span class="hljs-string">"./node_modules/knex/bin/cli.js seed:run --env development"</span>
+},
+</code></pre>
+<p>I'm of the opinion that npm scripts are a great way to automate repetitive tasks for your project. Here, you will see two scripts related to database setup, <code>db:migrate</code> and <code>db:seed</code>. Both of these scripts make use of the <a href="https://knexjs.org/">knex.js</a> library. Knex is a SQL query builder for Node.js. <em>note: it is not a full-featured ORM</em>. </p>
+<p>You may notice that the db commands are looking into the <code>node_modules</code> directory.  <code>"db:migrate": "./node_modules/knex/bin/cli.js migrate:latest --env development"</code></p>
+<p>This is to avoid installing yet another global package. <em>Yes, we could use <code>npx</code>, which is great, but not ideal for these types of tasks</em>. So we are running into our first problem. Any new developer on the team, will need to globally install <code>knex</code>, or know how to run the project-specific version. </p>
+<p>While not the biggest deal, we are now relying on a device-specific dependency, which could end up being problematic in the future. In addition, anyone new to the project will need to setup Postgres on their local machine. Again, while not a big deal, but it can be a time-consuming affair. <em>note: I'm not recommending that you avoid a local Postgres install</em> </p>
+<p>As you have all experienced, project setup can definitely eat away at your initial productivity. Especially when considering that no two projects are exactly the same.</p>
+<h4 id="a-note-on-the-knexfile">A note on the Knexfile</h4>
+<p><code>knexfile.js</code> is where the db connection info is stored. In this particular case, we have 3 configurations. This demo will only make use of the <code>development</code> config.</p>
+<pre><code class="lang-javascript hljs">  development: {
+    <span class="hljs-attr"><span class="hljs-attr">client</span></span>: <span class="hljs-string"><span class="hljs-string">"postgresql"</span></span>,
+    <span class="hljs-attr"><span class="hljs-attr">debug</span></span>: <span class="hljs-literal"><span class="hljs-literal">false</span></span>,
+    <span class="hljs-attr"><span class="hljs-attr">connection</span></span>: {
+      <span class="hljs-attr"><span class="hljs-attr">host</span></span>: <span class="hljs-string"><span class="hljs-string">"127.0.0.1"</span></span>,
+      <span class="hljs-attr"><span class="hljs-attr">database</span></span>: <span class="hljs-string"><span class="hljs-string">`</span><span class="hljs-subst"><span class="hljs-string"><span class="hljs-subst">${db}</span></span></span><span class="hljs-string">_dev`</span></span>,
+      <span class="hljs-attr"><span class="hljs-attr">charset</span></span>: <span class="hljs-string"><span class="hljs-string">"utf8"</span></span>
+    },
+    <span class="hljs-attr"><span class="hljs-attr">migrations</span></span>: {
+      <span class="hljs-attr"><span class="hljs-attr">directory</span></span>: path.join(<span class="hljs-string"><span class="hljs-string">"db"</span></span>, <span class="hljs-string"><span class="hljs-string">"migrations"</span></span>)
+    },
+    <span class="hljs-attr"><span class="hljs-attr">seeds</span></span>: {
+      <span class="hljs-attr"><span class="hljs-attr">directory</span></span>: path.join(<span class="hljs-string"><span class="hljs-string">"db"</span></span>, <span class="hljs-string"><span class="hljs-string">"seeds"</span></span>)
+    }
+  },
+</code></pre>
+<p>The items of note are inside the <code>connection</code> object. </p>
+<ul>
+<li><p><code>host</code> - The host URL</p>
+</li>
+<li><p><code>database</code> - Database name, in this case <code>docker-music_dev</code></p>
+</li>
+</ul>
+<p>We have not provided any type of security at this point. Obviously, that's a good idea, and we'll take care of it when setting up Docker. </p>
+<h3 id="running-the-app">Running the App</h3>
+<h4 id="db-setup">DB Setup</h4>
+<p>Let's assume that you've performed the necessary setup tasks. The next steps would be:</p>
+<ul>
+<li>Create a local database</li>
+<li>Perform migrations</li>
+<li>Seed the data</li>
+</ul>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> createdb docker-music_dev</span></span>
+<span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> npm run db:migrate</span></span>
+<span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> npm run db:seed</span></span>
+</code></pre>
+<h4 id="inspecting-data">Inspecting Data</h4>
+<p>Upon success, we can log in to our local Postgres db and inspect the data. </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> psql docker-music_dev</span></span>
+</code></pre>
+<p>Once in the db, we'll check our Artists table to ensure the data has been seeded.</p>
+<pre><code class="lang-sql hljs">docker-music_dev=# <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">id</span>, <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> artists;
+
+ id |         name
+<span class="hljs-comment">----+-----------------------</span>
+  1 | Sufjan Stevens
+  2 | Explosions in The Sky
+  3 | Fleet Foxes
+  4 | Hammock
+  5 | Run the Jewels
+  6 | Lord Huron
+  7 | Charles Bradley
+  8 | Local Natives
+  9 | A Tribe Called Quest
+ 10 | Ryan Adams
+
+docker-music_dev-# \q
+</code></pre>
+<h4 id="starting-the-server">Starting the Server</h4>
+<p>We can start the server with <code>npm run dev</code>. We'll use Postman (or the browser) to query data. </p>
+<p>The Postman collection can be found here: <a href="https://app.getpostman.com/run-collection/4937978ee04fcc43af64"><img src="./button.svg" alt="Run in Postman"></a></p>
+<p>Running our first query should result in the following output</p>
+<pre><code class="lang-json hljs">[
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">1</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Sufjan Stevens"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">2</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Explosions in The Sky"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">3</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Fleet Foxes"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">4</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Hammock"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">5</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Run the Jewels"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">6</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Lord Huron"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">7</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Charles Bradley"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">8</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Local Natives"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">9</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"A Tribe Called Quest"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    },
+    {
+        <span class="hljs-attr"><span class="hljs-attr">"id"</span></span>: <span class="hljs-number"><span class="hljs-number">10</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"name"</span></span>: <span class="hljs-string"><span class="hljs-string">"Ryan Adams"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"genre"</span></span>: <span class="hljs-literal"><span class="hljs-literal">null</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"created_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>,
+        <span class="hljs-attr"><span class="hljs-attr">"updated_at"</span></span>: <span class="hljs-string"><span class="hljs-string">"2018-10-14T17:09:55.807Z"</span></span>
+    }
+]
+</code></pre>
+<p>Great! So, it looks like our application is working. Now, let's take a look at how we could make this whole setup process easier with Docker. </p>
+<h2 id="docker-setup">Docker Setup</h2>
+<p>Next, we're going to checkout the <code>docker-setup</code> branch. This branch has the entire configuration in place. We are first going to run the app, to ensure everything works as expected. Then we'll step through the additional files and break them down line-by-line.</p>
+<h3 id="startup">Startup</h3>
+<p>First, we'll perform some cleanup, from our previous example. </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> dropdb docker-music_dev</span></span>
+<span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> npm uninstall knex -g</span></span>
+<span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> rm -rf node_modules</span></span>
+</code></pre>
+<p>Here, we are deleting the database, uninstalling knex (if applicable), and removing the <code>node_modules</code> directory. This will allow us to imagine we are approaching the project for the first time. </p>
+<p>At this point, we just need to ensure that Docker is running on our local machine. Refer to <a href="https://docs.docker.com/docker-for-mac/install/">Docker for Mac</a> or <a href="https://docs.docker.com/docker-for-windows/install/">Docker for Windows</a> for installation instructions. Once installed, we just need to start docker and wait for the little green light.</p>
+<p>We'll also need to create a <code>.env</code> file in the root directory, which holds our relevant environment variables. </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> touch .env</span></span>
+</code></pre>
+<p>In the <code>.env</code> file we'll add the following:</p>
+<pre><code class="hljs ini"><span class="hljs-attr">DB_PASSWORD</span>=changeme
+<span class="hljs-attr">DB_USER</span>=postgres
+<span class="hljs-attr">DB_NAME</span>=docker_music_dev
+</code></pre><p>From here, we can run: </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> docker-compose up --build</span></span>
+</code></pre>
+<p>This command will read our <code>docker-compose.yml</code> file, follow the instructions, and setup our containers. The <code>build</code> flag will build/rebuild our containers from the Docker images. </p>
+<p>The first build will take slightly longer as it needs to pull in the appropriate images and install our dependencies in the container. After a few minutes, we should be able to run our collection in Postman and get the expected output. </p>
+<p><img src="./celebrate.gif" alt="celebrate"></p>
+<p><strong>Now, imagine that you are assigned to a new project, on day 1, you clone down the project, run one command for setup, and start coding.</strong> This, to me, is one of the really nice features of development with Docker. Anyone can get up and running quickly, without spending hours setting up a local environment. </p>
+<p>With this particular setup, we are creating a container for our Node.js/Express API, as well as a separate container for our Postgres database. They are each running in isolated environments and communicating with each other on an as-needed basis.</p>
+<h3 id="exploring-the-dockerfile">Exploring the Dockerfile</h3>
+<p>To shut down our containers, we can just press <code>control</code> + <code>c</code> . This command will attempt to shut down the containers gracefully. If the action takes more than 10 seconds, a kill command will be sent. </p>
+<p>Now, we can step through the <code>Dockerfile</code> to understand what's happening. </p>
+<pre><code class="lang-dockerfile hljs"><span class="hljs-keyword"><span class="hljs-keyword">FROM</span></span> node:latest
+<span class="hljs-keyword"><span class="hljs-keyword">WORKDIR</span></span><span class="bash"><span class="bash"> /usr/app
+</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">COPY</span></span><span class="bash"><span class="bash"> package*.json ./
+</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">RUN</span></span><span class="bash"><span class="bash"> npm install
+</span></span><span class="hljs-keyword"><span class="hljs-keyword">RUN</span></span><span class="bash"><span class="bash"> npm install knex -g
+</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">COPY</span></span><span class="bash"><span class="bash"> . .
+</span></span>
+<span class="hljs-keyword"><span class="hljs-keyword">EXPOSE</span></span> <span class="hljs-number"><span class="hljs-number">3001</span></span>
+
+<span class="hljs-keyword"><span class="hljs-keyword">ENTRYPOINT</span></span><span class="bash"><span class="bash"> [</span><span class="hljs-string"><span class="bash"><span class="hljs-string">"sh"</span></span></span><span class="bash">, </span><span class="hljs-string"><span class="bash"><span class="hljs-string">"./docker-entrypoint.sh"</span></span></span><span class="bash">]</span></span><span class="bash">
+</span></code></pre>
+<p>As you can see, this is a relatively small file, yet powerful file. Obviously, these are the instructions that Docker uses to build images and create containers. However, an often overlooked benefit is that this also serves as instructions to your entire development team. Any team member, can open up the <code>Dockerfile</code> and understand every action that is being taken. This implies, that the <code>Dockerfile</code> can also serve as a source of truth for your containers.</p>
+<h4 id="from">FROM</h4>
+<p><code>FROM</code>  installs the base image for our container. You can consider this like installing a base Operating System. In addition, it will pull in a basic (and relevant) enviornment configuration. </p>
+<p>In our case, we are pulling in the latest Node image. You'll see in the <a href="https://hub.docker.com/_/node/">Official Node Docker Repo</a> that there are various flavors and versions of Node that we can install. You'll also notice that we can also lock in a specific Node version, if needed. </p>
+<p>Related the version of Node that we have selected. The Documentation states that:</p>
+<blockquote>
+<p> This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.</p>
+</blockquote>
+<p>Sounds good enough for our use case. As the project grows, it is very easy to swap the Node base image if the need arises. <em>This is also a great way to see if newer versions will cause regression bugs and/or breaking changes, as you can spin up a new container and easily throw it away</em>.</p>
+<h4 id="workdir">WORKDIR</h4>
+<p><code>WORKDIR</code> sets the directory where our the rest of our work should be performed. A typical convention is to use <code>/usr/app</code> as it will hold our application code. Unless a new <em>working directory</em> is specified, the remainder of our <em>actionable commands</em> will be performed in <code>/usr/app</code>. This can be roughly equated to  running the <code>cd</code> command.</p>
+<h4 id="copy">COPY</h4>
+<p><code>COPY</code> will, as expected, copy files from our host machine to the container. </p>
+<p>The syntax is: <code>COPY &lt;from-source-file-on-local-machine&gt; &lt;destination-in-container&gt;</code> </p>
+<p>In this first step, we are only copying our <code>package.json</code> and <code>package-lock.json</code> files. Why? you might ask? You'll see that our next step is to run <code>npm install</code>, by copying our <code>package.json</code> related files, we are allowing the <code>npm install</code> command to look at our cached dependencies. The benefit is that our containers will restart more quickly as they won't need to perform an entire install every time. </p>
+<p>Later, we will also run <code>COPY . .</code> - this will copy all of our source code to the container. </p>
+<h4 id="run">RUN</h4>
+<p><code>RUN</code> will execute specific commands on our image. In our case, we want to run an <code>npm install</code> to ensure that all of our dependencies are running in the container. </p>
+<p>We also install <code>knex</code> globally, as it makes our development lives much easier. </p>
+<h4 id="expose">EXPOSE</h4>
+<p><code>EXPOSE</code> tells the Docker container what ports to listen to at runtime. In our case, we are exposing port <code>3001</code> </p>
+<p>It's also worth noting that the documentation on <code>EXPOSE</code> states: </p>
+<blockquote>
+<p>The <code>EXPOSE</code> instruction does not actually publish the port. It functions as a type of documentation between the person who builds the image and the person who runs the container, about which ports are intended to be published. To actually publish the port when running the container, use the <code>-p</code> flag...and map one or more ports...</p>
+</blockquote>
+<p>This essentially means that we'll need to ensure that the appropriate ports are exposed when starting the container. This can be accomplished with the <code>-p</code> flag, or in the <code>docker-compose.yml</code> file.</p>
+<h4 id="entrypoint">ENTRYPOINT</h4>
+<p><code>ENTRYPOINT</code> allows you to run an executable command or file. In our case, we are specifiying that we want to run the <code>docker-entrypoint</code> shell script. </p>
+<p>An alternative approach to entrypoint is <code>CMD</code> which executes a command when the container starts. An example would be <code>CMD npm run dev</code>. </p>
+<p>We are choosing to use <code>ENTRYPOINT</code> based on convention. </p>
+<h2 id="docker-entrypoint">docker-entrypoint</h2>
+<p>The <code>docker-entrypoint.sh</code> file is executed when our container starts. Let's take a look at the code.</p>
+<pre><code class="lang-bash hljs"><span class="hljs-meta"><span class="hljs-meta">#!/bin/bash
+</span></span>
+<span class="hljs-built_in"><span class="hljs-built_in">echo</span></span> <span class="hljs-string"><span class="hljs-string">"waiting for db connection"</span></span>
+sleep 5
+
+<span class="hljs-built_in"><span class="hljs-built_in">echo</span></span> <span class="hljs-string"><span class="hljs-string">"resetting the database"</span></span>
+knex migrate:rollback
+knex migrate:latest --env development
+knex seed:run --env development
+
+<span class="hljs-built_in"><span class="hljs-built_in">echo</span></span> <span class="hljs-string"><span class="hljs-string">"starting the server"</span></span>
+npm run dev
+</code></pre>
+<p>This is a fairly simple script, however, let's step through it. </p>
+<ul>
+<li><code>#!/bin/bash</code> signifies that this should be run as a bash script. </li>
+<li>We'll then <code>echo</code> that we are waiting for database connections. </li>
+<li><code>sleep 5</code> is a simple way to ensure that our database will be up and accepting connections. <br> <em>note: there are definitely more elegant ways to accomplish this task</em></li>
+<li>Next we will echo that the database is being reset</li>
+<li><code>knex migrate:rollback</code> will rollback our migration</li>
+<li><code>knex migrate:latest</code> will run our migrations</li>
+<li><code>knex seed:run</code> will seed the database</li>
+<li>Finally, we will <code>echo</code> that we are spinning up the server and call the familiar <code>npm run dev</code> command</li>
+</ul>
+<p>This script will run automatically every time we spin up our container. As it stands right now, we are going to <em>destroy</em> and <em>create</em> the same data each time. In the next iteration, we'll create some logic around this, so that our data is not destroyed each time. </p>
+<h2 id="docker-compose">docker-compose</h2>
+<p>The next file to consider is <code>docker-compose.yml</code>. </p>
+<p>First, it's worth noting that <code>docker-compose</code> is not entirely necessary, in fact, a <code>Dockerfile</code> is also not needed for Docker. We could actually create a single command that would spin up our container. ie: <code>docker run --rm -v $(pwd):/usr/app -w /usr/app -p 3001:3001 node:latest npm run dev</code> However, this can become quickly un-manageble. </p>
+<p>We can also run our container with: <code>docker container start docker-music_api_1</code> <br>This will start up our API container. We can then perform a query with Postman to <code>http:localhost:3001/</code> which should provide a welcome message. </p>
+<p>Neat! our API is running!</p>
+<p>Unfortunately, upon querying any routes that require data will result in an error message stating that our Postgres database is not available. </p>
+<p><em>note: we can get the name of our container by running <code>docker container ls -a</code></em></p>
+<p>This is where <code>docker-compose</code> comes in. According to the <a href="https://docs.docker.com/compose/overview/">Docker Compose Overview</a>:</p>
+<blockquote>
+<p>Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.</p>
+</blockquote>
+<p>This convenience is definitely worth exploring. Let's again, step through the code line-by-line. </p>
+<pre><code class="lang-yaml hljs"><span class="hljs-attr"><span class="hljs-attr">version:</span></span> <span class="hljs-string"><span class="hljs-string">"3.1"</span></span>
+<span class="hljs-attr"><span class="hljs-attr">services:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">  api:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    build:</span></span> <span class="hljs-string"><span class="hljs-string">.</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    volumes:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">.:/usr/app</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">/usr/app/node_modules</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    ports:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">"3001:3001"</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    networks:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">dm_network</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    depends_on:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">postgres</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    environment:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">DB_PASSWORD=${DB_PASSWORD}</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">DB_USER=${DB_USER}</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">DB_NAME=${DB_NAME}</span></span>
+
+<span class="hljs-attr"><span class="hljs-attr">  postgres:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    image:</span></span> <span class="hljs-attr"><span class="hljs-attr">postgres:latest</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    environment:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">      POSTGRES_USER:</span></span> <span class="hljs-string"><span class="hljs-string">${DB_USER}</span></span>
+<span class="hljs-attr"><span class="hljs-attr">      POSTGRES_PASSWORD:</span></span> <span class="hljs-string"><span class="hljs-string">${DB_PASSWORD}</span></span>
+<span class="hljs-attr"><span class="hljs-attr">      POSTGRES_DB:</span></span> <span class="hljs-string"><span class="hljs-string">${DB_NAME}</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    volumes:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">      - postgres-data:</span></span><span class="hljs-string"><span class="hljs-string">/var/lib/postgresql/data</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    ports:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">"5432:5432"</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    expose:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">"5432"</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    networks:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">dm_network</span></span>
+
+<span class="hljs-attr"><span class="hljs-attr">  adminer:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    image:</span></span> <span class="hljs-string"><span class="hljs-string">adminer</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    restart:</span></span> <span class="hljs-string"><span class="hljs-string">always</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    ports:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-number"><span class="hljs-number">8080</span></span><span class="hljs-string"><span class="hljs-string">:8080</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    networks:</span></span>
+<span class="hljs-bullet"><span class="hljs-bullet">      -</span></span> <span class="hljs-string"><span class="hljs-string">dm_network</span></span>
+
+<span class="hljs-attr"><span class="hljs-attr">volumes:</span></span>
+  <span class="hljs-string"><span class="hljs-string">?</span></span> <span class="hljs-string"><span class="hljs-string">postgres-data</span></span>
+
+<span class="hljs-attr"><span class="hljs-attr">networks:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">  dm_network:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">    driver:</span></span> <span class="hljs-string"><span class="hljs-string">bridge</span></span>
+</code></pre>
+<p>Okay, so there is a <strong>lot</strong> going on here. From the 10,000 foot view, we are setting up 3 separate containers, and linking them together. </p>
+<ul>
+<li><code>api</code> - Our API</li>
+<li><code>postgres</code> - Our instance of Postgres</li>
+<li><code>adminer</code> - A tool for interacting with the database</li>
+</ul>
+<p>We also have <code>volumes</code> and <code>networks</code> which we'll explore later. </p>
+<h3 id="breaking-down-docker-compose">Breaking down Docker Compose</h3>
+<p>The first two lines define the version of <code>docker-compose</code> that we want to use, and what <code>services</code> we intend to work with.</p>
+<h4 id="api">api</h4>
+<p>As you can guess, <code>api</code> defines all relevant data from our application. This allows us to define all the relevant info that would normally be passed as command line arguments. </p>
+<ul>
+<li><code>build</code>  - specifies the configuration to use at build time, we are saying to use the files in our current directory.</li>
+<li><code>volumes</code> - allows us to share files, data, etc located on the host. <br>With <code>.:/usr/app</code> we are sharing data from our <em>current directory</em> with <code>usr/app</code> in the container.<br>We are also sharing node_modules<br><em>note: volumes, in-and-of themselves could be an entire talk</em></li>
+<li><code>ports</code> - what we use to specifiy (to the container) what ports should be exposed. The syntax is <code>&lt;host-port&gt;:&lt;container-port&gt;</code> <br><em>While these arguments can differ, I'd advise starting with the same port.</em></li>
+<li><code>networks</code> - defines what network we want our container to run on. We are stating that our container should run on a network named <code>dm-music</code> <br><em>As with Volumes, Networks deserve an entire talk.</em></li>
+<li><code>depends_on</code> - notes that our container relies on the<code>postgres</code> container succesfully starting. <br>Meaning, our postgres container will start first</li>
+<li><code>environment</code> - pulls in environment variables set in the <code>.env</code> file</li>
+</ul>
+<h3 id="postgres">postgres</h3>
+<p>You probably noticed, we haven't really had to do anything with postgres at this point. This is because we're pulling in the <a href="https://hub.docker.com/_/postgres/">Official Postgres Docker Image</a>. We'll need to provide some basic configuration, and then we will be good to go. Let's step through the configuration. </p>
+<ul>
+<li><code>image</code> - pulls in the latest postgres image</li>
+<li><code>environment</code> - supplies relevant environment variables for our database, including:<ul>
+<li>user</li>
+<li>password</li>
+<li>name</li>
+</ul>
+</li>
+<li><code>volumes</code> - creates a shared volume between the host and container. Allowing us to easily persist data across restarts.<br></li>
+<li><code>ports</code> - expose the standard postgres port of <code>5432</code> on the host and container</li>
+<li><code>network</code> - puts our container on the shared network. Allowing communication with the <code>api</code> container</li>
+</ul>
+<h4 id="updating-the-knexfile">Updating the knexfile</h4>
+<p>Before moving on, it's worth taking a look at the updated knexfile configuration. In the <code>development</code> object, have made a few changes. </p>
+<pre><code class="lang-javascript hljs">development: {
+  <span class="hljs-comment"><span class="hljs-comment">// ...</span></span>
+    connection: {
+      <span class="hljs-attr"><span class="hljs-attr">host</span></span>: <span class="hljs-string"><span class="hljs-string">"postgres"</span></span>,
+      <span class="hljs-attr"><span class="hljs-attr">database</span></span>: process.env.DB_NAME,
+      <span class="hljs-attr"><span class="hljs-attr">password</span></span>: process.env.DB_PASSWORD,
+      <span class="hljs-attr"><span class="hljs-attr">user</span></span>: process.env.DB_USER,
+      <span class="hljs-attr"><span class="hljs-attr">charset</span></span>: <span class="hljs-string"><span class="hljs-string">"utf8"</span></span>
+    },
+    <span class="hljs-attr"><span class="hljs-attr">pool</span></span>: { <span class="hljs-attr"><span class="hljs-attr">min</span></span>: <span class="hljs-number"><span class="hljs-number">0</span></span>, <span class="hljs-attr"><span class="hljs-attr">max</span></span>: <span class="hljs-number"><span class="hljs-number">10</span></span> },
+   <span class="hljs-comment"><span class="hljs-comment">// ...</span></span>
+  },
+</code></pre>
+<ul>
+<li><code>host</code> - the host is now our <code>postgres</code> container defined in <code>docker-compose.yml</code><br><em>this only works, because we've created a shared network</em></li>
+<li><code>database</code> - use the <code>DB_NAME</code> property found in the <code>.env</code> file</li>
+<li><code>password</code>- use the <code>DB_PASSWORD</code> property found in the <code>.env</code> file</li>
+<li><code>user</code>- use the <code>DB_USER</code> property found in the <code>.env</code> file</li>
+<li><code>pool</code> - define a connection pool <br><em>by default this is set to <code>min: 2</code> and <code>max: 10</code></em></li>
+</ul>
+<p>We've also added a <code>require</code> statement in <code>app.js</code> that loads the <a href="https://www.npmjs.com/package/dotenv">dotenv js package</a></p>
+<pre><code class="lang-javascript hljs"><span class="hljs-keyword"><span class="hljs-keyword">const</span></span> express = <span class="hljs-built_in"><span class="hljs-built_in">require</span></span>(<span class="hljs-string"><span class="hljs-string">"express"</span></span>);
+<span class="hljs-keyword"><span class="hljs-keyword">const</span></span> logger = <span class="hljs-built_in"><span class="hljs-built_in">require</span></span>(<span class="hljs-string"><span class="hljs-string">"morgan"</span></span>);
+<span class="hljs-keyword"><span class="hljs-keyword">const</span></span> bodyParser = <span class="hljs-built_in"><span class="hljs-built_in">require</span></span>(<span class="hljs-string"><span class="hljs-string">"body-parser"</span></span>);
+<span class="hljs-built_in"><span class="hljs-built_in">require</span></span>(<span class="hljs-string"><span class="hljs-string">"dotenv"</span></span>).config();
+<span class="hljs-comment"><span class="hljs-comment">// ...</span></span>
+</code></pre>
+<h3 id="adminer">adminer</h3>
+<p><code>adminer</code> is a nice addition to Postgres, as it gives us a UI to interact with. The <code>adminer</code> configuration is fairly straight forward. In fact, we are using the exact code specified in the Docker Postgres repo. </p>
+<ul>
+<li><code>image</code> - pull in the <code>adminer</code> image</li>
+<li><code>restart</code> - always restart the container on build</li>
+<li><code>ports</code> - expose <code>8080</code> on the host and container</li>
+<li><code>networks</code> - place container on the <code>dm-network</code> </li>
+</ul>
+<p>We can access the interface by navigating to <a href="http://localhost:8080/">localhost:8080</a> and entering the following credentials: </p>
+<ul>
+<li>System - PostgreSQL</li>
+<li>Server - postgres (this connecting to the <code>postgres</code> container on <code>dm-network</code>)</li>
+<li>Username - postgres</li>
+<li>Password - changeme</li>
+<li>Database - docker_music_dev</li>
+</ul>
+<p>Here, we can perform all the standard CRUD actions, add new tables, and more. </p>
+<h3 id="volumes">volumes</h3>
+<p>We have moved out of <code>service</code> object at this point, and have a top-level <code>volume</code> object. This is due to the fact that we want to share our <code>postgres-data</code> volume across multiple services. </p>
+<p>The syntax may look slightly strange. This is due to the fact that our volume is already established. An alternative syntax is: </p>
+<pre><code class="lang-yaml hljs"><span class="hljs-attr"><span class="hljs-attr">volumes:</span></span>
+<span class="hljs-attr"><span class="hljs-attr">  postgres-data:</span></span>
+</code></pre>
+<h3 id="networks">networks</h3>
+<p>Also, at the root (top) level, we need to specify our shared network. Here we will explicitly specify that the <code>dm-network</code> will use Docker's default <code>bridge</code> driver. </p>
+<p>While there are several network options provided by Docker, <code>bridge</code> is by far the most common.  </p>
+<p>If we run <code>docker network ls</code> we can see a list of all networks</p>
+<pre><code class="lang-shell hljs">NETWORK ID          NAME                      DRIVER              SCOPE
+1f1b75b0291c        bridge                    bridge              local
+64167645bdb4        docker-music_dm_network   bridge              local
+c6540f56f965        host                      host                local
+526520305df5        none                      null                local
+</code></pre>
+<p>Here, you'll see that the <code>docker-music_dm_network</code> is sharing the <code>bridge</code> driver. </p>
+<p>To learn more about Docker's network drivers, check out <a href="https://docs.docker.com/network/#network-drivers">The Docker Networking Guides</a></p>
+<h2 id="-dockerignore">.dockerignore</h2>
+<p>Last but not least, we've added several items to our <code>.dockerignore</code> file. </p>
+<pre><code class="hljs asciidoc"><span class="hljs-title">.git</span>
+<span class="hljs-strong">*Dockerfile*</span>
+<span class="hljs-strong">*docker-compose*</span>
+node<span class="hljs-emphasis">_modules
+</span></code></pre><p>These files do not need to be copied over to the container, by adding them to <code>.dockerignore</code> we can improve build times and ensure that our container is slim. </p>
+<h2 id="docker-updates">Docker-Updates</h2>
+<p>This branch is actually, slightly misleading. We're not going to actually make changes to our <code>Dockerfile</code> or <code>docker-compose.yml</code>. Instead, we are going to create a couple of helpful scripts for setting up and tearing down the database. </p>
+<p>The code can be found on the <code>docker-updates</code> branch. </p>
+<h3 id="changes">Changes</h3>
+<p>Here, we are going to create two scripts in the <code>db</code> directory </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> touch db/setup.sh</span></span>
+<span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> touch db/reset.sh</span></span>
+</code></pre>
+<p>Next, we'll remove most of the code from our <code>docker-entrypoint.sh</code> file. </p>
+<pre><code class="lang-bash hljs"><span class="hljs-meta"><span class="hljs-meta">#!/bin/bash
+</span></span>
+<span class="hljs-built_in"><span class="hljs-built_in">echo</span></span> <span class="hljs-string"><span class="hljs-string">"starting the server"</span></span>
+npm run dev
+</code></pre>
+<p>In <code>db/setup.sh</code> we'll add the setup scripts</p>
+<pre><code class="lang-bash hljs"><span class="hljs-meta"><span class="hljs-meta">#!/bin/bash
+</span></span>
+<span class="hljs-built_in"><span class="hljs-built_in">echo</span></span> <span class="hljs-string"><span class="hljs-string">"setting up the database"</span></span>
+knex migrate:latest --env development
+knex seed:run --env development
+</code></pre>
+<p>In <code>db/reset.sh</code> we'll add a couple of extra lines</p>
+<pre><code class="lang-bash hljs"><span class="hljs-meta"><span class="hljs-meta">#!/bin/bash
+</span></span>
+<span class="hljs-built_in"><span class="hljs-built_in">echo</span></span> <span class="hljs-string"><span class="hljs-string">"resetting the database"</span></span>
+knex migrate:rollback
+knex migrate:latest --env development
+knex seed:run --env development
+</code></pre>
+<p>Finally, let's add a couple of simple scripts in our <code>package.json</code> file</p>
+<pre><code class="lang-json hljs"><span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-attr">"start"</span>: <span class="hljs-string">"NODE_ENV=production node app.js"</span>,
+    <span class="hljs-attr">"dev"</span>: <span class="hljs-string">"NODE_ENV=development nodemon app.js"</span>,
+    <span class="hljs-attr">"db:setup"</span> : <span class="hljs-string">"sh ./db/setup.sh"</span>,
+    <span class="hljs-attr">"db:reset"</span> : <span class="hljs-string">"sh ./db/reset.sh"</span>
+},
+</code></pre>
+<p>Now, anytime we want to setup, or reset the database, we can make use of the new scripts. </p>
+<h3 id="detached-mode">Detached Mode</h3>
+<p>Before we move on, let's see if our application is still performing as expected. </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> docker-compose up --build</span></span>
+</code></pre>
+<p><em>note: you may notice the container takes longer to build. This is because our <code>package.json</code> file has changed, and this layer must be re-built</em></p>
+<p>Running a few calls on our endpoints, will reveal the expected behavior. </p>
+<p>Until now, we have started up our containers and let it kind-of over-take the terminal. Obviously, we can open a second terminal window to perform various tasks. However, Docker does offer us the <code>-d</code> flag which means we can run our containers in <code>detached</code> mode. </p>
+<p>What does that look like? </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> docker-compose up --build </span><span class="hljs-_"><span class="bash"><span class="hljs-_">-d</span></span></span></span>
+</code></pre>
+<p>Upon success, you'll be dropped back into your normal shell. This could cause us to think that something went wrong. Fortunately, that's not the case. Instead, our containers are now running detached from the terminal. We can verify the containers are running with <code>docker container ls</code>. </p>
+<h4 id="exec">exec</h4>
+<p>Now, we can execute commands against our containers. Let's try resetting the database</p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> docker-compose </span><span class="hljs-built_in"><span class="bash"><span class="hljs-built_in">exec</span></span></span><span class="bash"> api npm run db:reset</span></span>
+</code></pre>
+<p>You'll see output indicating that the command was successful. What is happening here, is that we are telling docker-compose to <strong>execute</strong> a command. This command can be broken down into 3 separate parts</p>
+<ul>
+<li><code>exec</code> - execute a command</li>
+<li><code>api</code> - the container to operate on</li>
+<li><code>npm run db:reset</code> - the command we wish to execute</li>
+</ul>
+<p>Alternatively, we can use the <code>docker</code> command. The major difference is that we'll have to provide the full name of the container. </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> docker </span><span class="hljs-built_in"><span class="bash"><span class="hljs-built_in">exec</span></span></span><span class="bash"> docker-music_api_1 npm run db:reset</span></span>
+</code></pre>
+<p>The <code>exec</code> command will also allow us to log in to the container on an as-needed basis. </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> docker-compose </span><span class="hljs-built_in"><span class="bash"><span class="hljs-built_in">exec</span></span></span><span class="bash"> api bash</span></span>
+</code></pre>
+<p>This command will execute the <code>bash</code> command, dropping us into a <code>bash</code> session inside of the container. Here we can interact with the application as we would normally expect. Once we're ready to exit, we can simply type <code>exit</code> to be brought back to the shell session on our host machine.</p>
+<p>It's worth nothing that an alternative (and fairly common) syntax for this same command is: </p>
+<pre><code class="lang-shell hljs"><span class="hljs-meta"><span class="hljs-meta">$</span></span><span class="bash"><span class="bash"> docker </span><span class="hljs-built_in"><span class="bash"><span class="hljs-built_in">exec</span></span></span><span class="bash"> -it docker-music_api_1 bash</span></span>
+</code></pre>
+<p>Here, we are passing an additional flag of <code>-it</code> to <code>exec</code>. This flag ensures that our container will accept input and enables <code>TTY</code>. </p>
+<p>There are many additional commands that can be executed against your containers, it will definitely take some time to explore them. </p>
+<h2 id="summary">Summary</h2>
+<p>We've covered some basic development use cases for working with Docker. My hope is that you'll find this information compelling enough to explore Docker on your own. </p>
+<p>If you want to reach me, you can find me on twitter @shanebarringer. I'm not very good at tweeting, but I'll try to be better. Also, we are hiring Software Engineers of all skill levels at The Home Depot. Feel free to reach out if you'd be interested in learning more about THD Technology. </p>
+</section></div>
+        <div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: block;"></div><div class="slide-background past" data-loaded="true" style="display: block;"></div><div class="slide-background past" data-loaded="true" style="display: block;"></div><div class="slide-background stack past" style="display: none;" data-loaded="true"><div class="slide-background present" style="display: none;" data-loaded="true"></div><div class="slide-background future" style="display: none;" data-loaded="true"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"></div></div><div class="progress" style="display: block;"><span style="width: 575.833px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight enabled" aria-label="next slide"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">What this talk is about
+We are going to look at a real world example of a Node.js API with a Postgres database. 
+The goal is to demonstrate
+
+Why you should consider using Docker for development
+How to use Docker effectively in Development
+
+</div></div>
+
+        <script src="./jquery-3.3.1.min.js"></script>
+        <script src="./reveal.js"></script>
+        <script src="./head.min.js"></script>
+        <script type="text/javascript" src="./highlight.js"></script>
+        <script type="text/javascript" src="./notes.js"></script>
+        <script type="text/javascript" src="./marked.js"></script>
+        <script type="text/javascript" src="./markdown.js"></script>
+        <script src="./slides.js"></script>
+    
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal;"></div></div></body></html>
